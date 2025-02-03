@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <link rel="icon" href="landecs.png" type="image/jpeg">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .loading-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .dots-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            background-color: #007bff;
+            border-radius: 50%;
+            margin: 0 5px;
+            opacity: 1;
+            animation: dotAnimation 1.5s infinite;
+        }
+
+        #dot1 {
+            animation-delay: 0s;
+        }
+
+        #dot2 {
+            animation-delay: 0.3s;
+        }
+
+        #dot3 {
+            animation-delay: 0.6s;
+        }
+
+        .wait-text {
+            opacity: 0;
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 20px;
+            animation: textFadeIn 1s ease-out forwards;
+            display: none;
+        }
+
+        @keyframes dotAnimation {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            50% {
+                opacity: 0.3;
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes textFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-out {
+            animation: fadeOut 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="loading-container">
+        <div class="dots-container">
+            <div class="dot" id="dot1"></div>
+            <div class="dot" id="dot2"></div>
+            <div class="dot" id="dot3"></div>
+        </div>
+        <div class="wait-text">Quiet Rebirth...</div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            // Fade out dots
+            document.querySelector('.dots-container').classList.add('fade-out');
+
+            // Show and animate wait text
+            const waitText = document.querySelector('.wait-text');
+            waitText.style.display = 'block';
+
+            // Redirect after 1 second (total 8 seconds)
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 3000);
+        }, 4000); // 7 seconds for dots animation
+    </script>
+</body>
+
+</html>
