@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - LanDecs</title>
+    <link rel="stylesheet" href="css/landecs-ui/landecs-ux design/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1c1c1e, #3a3a3c);
+        color: white;
+        overflow-x: hidden;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+        background-color: #000;
+        color: white;
+    }
+
+    header .logo {
+        font-size: 1.2rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: left;
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 1rem;
+    }
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+
+    nav a:hover {
+        color: #00d8ff;
+
+    }
+
+    .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        nav {
+            display: none;
+            flex-direction: column;
+            background-color: #000;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 10;
+        }
+
+        nav.show {
+            display: flex;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+    }
+
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 0;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        z-index: 1.4em;
+        position: relative;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-top: 15px;
+        z-index: 2;
+        margin: 10px;
+        position: relative;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero .cta {
+        margin-top: 30px;
+        z-index: 2;
+        position: relative;
+    }
+
+    .hero .cta button {
+        padding: 10px 30px;
+        font-size: 1rem;
+        color: #fff;
+        background: whitw;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .hero .cta button:hover {
+        background: #009fcc;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    section {
+        padding: 50px 5%;
+        background: white;
+        color: black;
+    }
+
+    section h2 {
+        text-align: left;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        color: black;
+    }
+
+    .features {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .feature {
+        flex: 1 1 calc(33.333% - 20px);
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        padding: 20px;
+        transition: transform 0.3s;
+    }
+
+    .fefsaature:hover {
+        transform: translateY(-10px);
+    }
+
+    .feature i {
+        $
+    }
+
+    l
+    }
+    }
+    }
+
+    ([[]]) fontd-size: 3rem;
+    color: #00d8ff;
+    margin-bottom: 10px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background: #000;
+        color: #fff;
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        header nav {
+            display: none;
+        }
+
+        header .menu-toggle {
+            display: block;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .features {
+            flex-direction: column;
+        }
+    }
+
+    .about {
+        font-size: 30px;
+        font-weight: bold;
+        color: #00d8ff;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 20px 0;
+    }
+
+    .mission {
+        font-size: 30px;
+        font-weight: bold;
+        color: #00d8ff;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 20px 0;
+    }
+
+    .vision {
+        font-size: 30px;
+        font-weight: bold;
+        color: #00d8ff;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 20px 0;
+    }
+
+    .meaning {
+        font-size: 20px;
+        font-weight: bold;
+        color: #00d8ff;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 20px 0;
+    }
+
+    #background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .footer-copy {
+        text-align: center;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+
+    .footer {
+        background: linear-gradient(135deg, #1c1c1e, #3a3a3c);
+        color: #ecf0f1;
+        padding: 30px 0;
+        text-align: left;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .footer-section {
+        flex: 1;
+        padding: 0 15px;
+    }
+
+    .footer-section h4 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: #00d8ff;
+    }
+
+    .footer-section p {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .social-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .social-links li {
+        margin: 5px 0;
+    }
+
+    .social-links a {
+        color: #ecf0f1;
+        text-decoration: none;
+    }
+
+    .social-links a:hover {
+        text-decoration: underline;
+    }
+
+    .glowing-text {
+        font-weight: bold;
+        background: linear-gradient(135deg, #1c1c1e, #3a3a3c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        animation: glow 2s infinite;
+        transition: all 0.5s ease;
+    }
+
+    @keyframes glow {
+        0% {
+            text-shadow: 0 0 10px #00d8ff;
+        }
+
+        50% {
+            text-shadow: 0 0 20px #00d8ff, 0 0 30px black;
+        }
+
+        100% {
+            text-shadow: 0 0 10px #00d8ff;
+        }
+    }
+
+
+
+    .greeting {
+        font-family: 'Intro Script', cursive;
+        font-weight: bold;
+        font-size: 5rem;
+        display: inline-block;
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out forwards, slideIn 2s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-50px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    #lanDecs-products {
+        background: linear-gradient(135deg, #1c1c1e, #3a3a3c);
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .product-list {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .product-item {
+        border-radius: 50px;
+        padding: 20px;
+        width: 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .product-logo {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .action-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        /* Primary blue color */
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .action-button:hover {
+        background-color: #0056b3;
+        /* Darker blue on hover */
+        transform: translateY(-3px);
+        /* Slight upward movement on hover */
+    }
+
+    .action-button:active {
+        background-color: #003f8a;
+        /* Even darker blue on click */
+        transform: translateY(0);
+        /* Reset movement */
+    }
+
+    .learn-more {
+        color: #00f0ff;
+        font-size: 1.2rem;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        transition: color 0.3s ease;
+    }
+
+    .learn-more:hover {
+        color: #0077ff;
+    }
+</style>
+
+<body>
+    <header>
+        <a href="index.html" class="learn-more"><i class="fas fa-chevron-left"></i> Back</a>
+    </header>
+    <section>
+
+        <h1>Privacy Policy for LanQ by LanDecs</h1>
+        <p><strong>Effective Date: February 2, 2025</strong></p>
+
+        <p>At LanQ by LanDecs, we are committed to respecting and protecting the privacy of our users. This privacy policy outlines the types of information we do not collect, our policies regarding the use of personal data, and the general operations of our platform. By using this website, you consent to the practices described in this privacy policy.</p>
+
+        <h2>Introduction</h2>
+        <p>LanQ by LanDecs is a platform designed to inspire and motivate individuals through the sharing of profound philosophical quotes, personal studies, insightful articles, and reflective content curated by Eldrex Delos Reyes Bula. The purpose of this platform is to provide a space where users can engage with thought-provoking material that encourages personal growth and understanding. Whether you're looking for motivation, guidance, or a deeper perspective on life, LanQ offers a range of content to spark introspection and elevate your mindset. To create an enriching experience for our users, we have designed the site with sleek, dynamic visuals that include animations, transitions, and icons. These features are powered by CSS to ensure smooth navigation and an aesthetically pleasing layout that enhances the overall user experience.</p>
+
+        <p>Our mission at LanQ by LanDecs is to maintain a clean, user-friendly environment where individuals can explore content without the burden of intrusive ads or data collection. We understand the importance of privacy in today’s digital age, which is why we have taken every step to ensure that no personal information is collected or tracked by our platform. We do not require users to input sensitive data or create personal profiles to access the content. Our goal is simply to provide a safe and engaging space for those seeking philosophical reflections, psychological insights, and motivational material. Through our commitment to privacy and simplicity, we aim to offer users a seamless and secure browsing experience, free from the distractions of unnecessary data-gathering practices.</p>
+
+        <p>In addition to our dedication to privacy and user experience, LanQ by LanDecs also upholds a strong ethical stance when it comes to the use of content available on the platform. We respect copyright laws and believe in the importance of responsible sharing and consumption of intellectual property. The content published on LanQ, whether it be philosophical reflections, motivational quotes, or articles, is carefully curated with respect for the original creators and the value of intellectual freedom. We encourage users to explore, reflect, and share our content in a manner that respects the ethical principles of sharing knowledge and fostering a positive community of learners. Our platform is not only a hub of inspiration but also a space where the responsible use of information is prioritized, contributing to the overall mission of fostering personal growth and knowledge sharing.</p>
+        <br>
+        <hr><br>
+        <h2>Personal Information Collection and Data Tracking</h2>
+        <p>LanQ by LanDecs is committed to ensuring user privacy. We do not collect, store, or process any personal information such as names, email addresses, or phone numbers. Visitors to the platform are not required to provide any personal details to access content such as quotes, articles, or studies. The website is carefully designed to ensure that no personal information is unintentionally gathered through cookies, tracking systems, or any other form of identification. Our focus is on providing a seamless and enriching experience without any intrusion into your privacy.</p>
+        <p>We do not engage in data tracking, mining, or collect usage analytics on our platform. No third-party services, such as Google Analytics or Facebook Pixels, are used to monitor user behavior or interactions with the site. Our approach centers on simplicity and privacy, with only aesthetic features like dark and light modes to enhance user experience. The website’s smooth animations and transitions are powered by CSS, and there are no cookies or tracking mechanisms in place. By maintaining this minimalistic design, LanQ by LanDecs ensures that your browsing experience is free from intrusive data collection practices.</p>
+        <br>
+        <hr><br>
+        <h2>Copyright and Plagiarism Policy</h2>
+        <p>LanQ by LanDecs is a platform dedicated to the work of Eldrex Delos Reyes Bula. The content available on this site, including quotes, studies, articles, and insights, is the intellectual property of Eldrex. Users are encouraged to engage with this content and reflect upon its philosophical and motivational aspects; however, we ask that all content be attributed properly when shared or referenced.</p>
+
+        <br>
+        <hr><br>
+        <h3 id="notice">Copyright Notice:</h3>
+        <div class="notice">
+            <p>All quotes in this collection are copyrighted by Eldrex Delos Reyes Bula and belong to LanQ. Any use, publication, or distribution of these quotes without proper citation and permission is considered plagiarism. If you wish to post or share these quotes, please ensure that appropriate credit is given to the author.</p>
+        </div>
+        <p>All text, quotes, studies, and articles on LanQ by LanDecs are protected by copyright and intellectual property laws. Unauthorized use, reproduction, or distribution of any content from this site is strictly prohibited. This includes any form of duplication, adaptation, or modification without prior written consent from the copyright holder. We take intellectual property seriously and hold the rights of the original creators in high regard. If you choose to share or reference the content found on LanQ, we request that you give proper credit to Eldrex Delos Reyes Bula and LanQ by LanDecs to uphold the integrity of the material.</p>
+
+        <p>Respect for intellectual property is essential to the ethical sharing of ideas and knowledge. At LanQ by LanDecs, we encourage the free exchange of ideas, but we ask users to <strong>always</strong> respect the integrity of the original work by citing <strong>LanQ by LanDecs</strong> and <strong>Eldrex Delos Reyes Bula</strong> when sharing or discussing the content. This ensures that the creator’s rights are protected and that the work retains its authenticity when disseminated to a wider audience.</p>
+
+        <p>When sharing any of the quotes, studies, or articles from this platform, it is crucial to provide <strong>appropriate credit</strong> and acknowledge the source. Whether you are referencing the material on social media, in academic work, or elsewhere, proper citation plays a vital role in preserving the <strong>authenticity</strong> and <strong>value</strong> of the content. By upholding these standards, you contribute to the ethical use of intellectual property and ensure that the creator's rights are respected. We believe that sharing ideas should always be done with integrity, and we ask all users of LanQ by LanDecs to adhere to this principle when engaging with the content on our platform.</p>
+        <br>
+        <hr><br>
+        <h2 id="purpose">Purpose and Use of the Website</h2>
+        <p>The primary purpose of LanQ by LanDecs is to serve as a source of inspiration, motivation, and philosophical reflection for individuals seeking to explore deeper insights into life. The content on the platform is thoughtfully curated to help users navigate the complexities of human experience, offering valuable resources for those interested in personal growth, self-improvement, and philosophical inquiry. With a focus on thought-provoking quotes, psychological studies, and philosophical concepts, LanQ is designed to engage individuals in a reflective and transformative process. Whether you are looking for clarity, encouragement, or wisdom, LanQ is here to provide a space where these elements converge to inspire and empower.</p>
+
+        <p>In addition to its enriching content, LanQ by LanDecs boasts a dynamic and visually appealing design that prioritizes the user experience. The website's sleek animations, smooth transitions, and interactive elements are carefully crafted to create an immersive and aesthetically pleasing environment. These features work together to allow visitors to navigate the site with ease, ensuring that the content is presented in a way that invites contemplation and focus. The website’s design is not just functional but is also a reflection of the thoughtful approach we take to personal development. It serves as a digital sanctuary where users can absorb content in a calm, peaceful, and contemplative manner, free from distractions. This design philosophy contributes to the overall goal of fostering a space where individuals can slow down, reflect, and grow.</p>
+
+        <p>LanQ by LanDecs is more than just a platform for sharing wisdom; it is a community of like-minded individuals who share a passion for self-reflection and growth. We believe that inspiration and motivation are key to igniting the potential within each person, and our platform exists to provide a steady stream of thought-provoking content to encourage this. By offering the works of Eldrex Delos Reyes Bula, along with related psychological and philosophical material, we aim to help individuals reflect on their life’s purpose, goals, and values. Our mission is to create a space where individuals can be uplifted by powerful words, motivated to take action, and inspired to continue on their journey of self-improvement. Whether you are seeking guidance during a challenging time or simply looking for a fresh perspective, LanQ is here to offer the support and inspiration you need.</p>
+
+        <br>
+        <hr><br>
+        <h2>User Rights and Access to the Website</h2>
+        <p>Users of LanQ by LanDecs are granted access to the platform for the sole purpose of viewing and engaging with the content that is made available. While the platform is open for exploration, users must adhere to specific guidelines to maintain the integrity and purpose of the site. As part of the user agreement, users are prohibited from making any alterations to the content, reproducing it in ways that violate copyright laws, or distributing it without proper attribution. By respecting these terms, users contribute to preserving the site’s focus on personal development and philosophical reflection.</p>
+
+        <p><strong>No Alterations:</strong> Users are prohibited from modifying, adapting, or altering the content in any manner. This includes changing the form, context, or substance of the quotes, studies, or articles shared on the platform. The content is presented in its original form for a reason—its impact lies in its unaltered state. Any changes to the material would compromise its intended meaning and diminish its value as a source of inspiration and reflection.</p>
+
+        <p><strong>Proper Attribution:</strong> When sharing or referencing any content from LanQ by LanDecs, it is essential to provide proper credit to <strong>Eldrex Delos Reyes Bula</strong> and <strong>LanQ by LanDecs</strong>. Whether you are sharing quotes or referencing studies, you must always acknowledge the original source. Attribution ensures that the intellectual property rights of the creator are respected and that the integrity of the content is maintained. Proper citation is a fundamental practice that upholds the credibility and authenticity of the work being shared.</p>
+
+        <p><strong>Personal Use Only:</strong> The content provided on LanQ by LanDecs is intended solely for personal use and reflection. Users are encouraged to engage with the material for self-improvement, inspiration, and philosophical exploration. However, any commercial use, reproduction, or distribution of the content without explicit permission is prohibited. This includes using the material for profit or commercial gain. The website's mission is to foster personal growth, and it is crucial that users respect these guidelines to ensure the platform remains a space for genuine and thoughtful reflection.</p>
+
+        <p>LanQ by LanDecs is dedicated to offering a platform for philosophical exploration, motivation, and personal development. To preserve this environment, it is essential that users follow these terms of use. By doing so, they contribute to maintaining the integrity of the website and ensuring that the content continues to serve as a valuable resource for all who seek wisdom and inspiration.</p>
+        <br>
+        <hr><br>
+        <h2>Changes to This Privacy Policy</h2>
+        <p>LanQ by LanDecs reserves the right to modify or update this privacy policy at any time. Any changes will be reflected on this page, and the effective date of the policy will be updated accordingly. We encourage users to review this policy periodically to stay informed about how we handle privacy and user data.</p>
+        <p>By continuing to use LanQ by LanDecs after any changes are made to this policy, you agree to the updated terms and practices.</p>
+        <br>
+        <hr><br>
+        <h2>Contact Us</h2>
+        <p>Curiosity is the foundation of knowledge, and questions are the pathways to deeper understanding. If you seek clarity regarding our privacy policy or wish to explore the philosophy behind LanQ by LanDecs, we welcome your inquiries. This platform exists not only as a source of wisdom but as a space for meaningful engagement. We encourage you to reach out, whether to seek guidance, share insights, or simply connect in the pursuit of knowledge.</p>
+
+        <p>To reach us, you may send an email to <strong>eldrexdelosreyesbula@gmail.com</strong> or visit our contact page on the LanQ by LanDecs website. Just as thoughts flow freely in the pursuit of truth, so too does our commitment to fostering an environment where questions are met with thoughtful dialogue. Your voice matters, and we are here to listen.</p>
+
+    </section>
+</body>
+
+</html>
