@@ -1,6 +1,18 @@
 <p align="center">
-  <img src="https://eldrex.landecs.org/squad/lanq-logo.png" alt="LanQ Logo" width="160">
+  <span style="
+    display: inline-block;
+    background: #ffffff;
+    padding: 14px 18px;
+    border-radius: 16px;
+  ">
+    <img 
+      src="https://eldrex.landecs.org/squad/lanq-logo.png" 
+      alt="LanQ Logo" 
+      width="160"
+    >
+  </span>
 </p>
+
 
 # LanQ
 
