@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://eldrex.landecs.org/squad/lanq-logo.png" alt="LanQ Logo" width="160">
+</p>
+
 # LanQ
 
 [LanQ Web App](https://lanq.landecs.org) – A premium, offline-first QR code generator built by the LanDecs team. LanQ enables users to create professional, privacy-first QR codes entirely in the browser, with no cloud services, subscriptions, or tracking.
