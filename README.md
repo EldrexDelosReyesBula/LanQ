@@ -1,95 +1,85 @@
-
 # LanQ
 
-LanQ is a premium, offline-first QR code generator built by the LanDecs team. It is designed to prove that powerful and professional tools do not require cloud services, subscriptions, analytics, or user tracking.
-
-LanQ runs entirely in the browser, keeping all data on the user’s device while providing high-quality QR generation and customization features.
+[LanQ Web App](https://lanq.landecs.org) – A premium, offline-first QR code generator built by the LanDecs team. LanQ enables users to create professional, privacy-first QR codes entirely in the browser, with no cloud services, subscriptions, or tracking.
 
 ---
 
 ## Features
 
 ### QR Code Types
-LanQ supports multiple QR code formats in a single application:
-- WiFi
-- vCard
-- SMS
-- Email
-- Phone
-- Cryptocurrency addresses
-- Social media links
-- Custom URLs and text
+Generate a wide variety of QR codes in one app:
+- WiFi credentials  
+- vCard / Contact cards  
+- SMS messages  
+- Email addresses  
+- Phone numbers  
+- Cryptocurrency addresses  
+- Social media links  
+- Custom text or URLs  
 
-### Design and Customization
-- 6+ professional design presets  
-- Custom colors and backgrounds  
-- Adjustable borders and corner radius  
-- Clean and modern visual styles for branding  
+### Intelligent Templates & Coloring
+- Auto-blend templates for professional and visually appealing QR designs  
+- Smart color adjustments to ensure QR readability  
+- Multiple presets for quick generation or branding purposes  
+
+### Design & Customization
+- Adjust colors, borders, and corner radius  
+- Choose from modern, minimalist, or creative styles  
+- Create unique QR codes suitable for print and digital media  
 
 ### Export Options
-- Infinite-resolution SVG export  
-- Print-ready output with no quality loss  
-- Ideal for both digital and physical use  
+- High-resolution, print-ready SVG files  
+- Scalable for any digital or physical application  
 
-### Offline-First
-- Works fully offline after first load  
-- Installable as a Progressive Web App (PWA)  
-- No internet connection required  
-
----
-
-## Privacy and Security
-
-LanQ is built with privacy as a core principle:
-- All processing is done locally in the browser  
-- No servers, databases, or APIs  
-- No analytics, tracking pixels, or logs  
-- QR codes never leave the user’s device  
+### Offline & Privacy
+- Fully offline after initial load  
+- Progressive Web App (PWA) support for offline usage  
+- All data is processed locally; nothing leaves your device  
+- Zero tracking, analytics, or server logs  
 
 ---
 
-## Why LanQ
+## Why LanQ?
 
-Traditional QR generators often lock features behind subscriptions, track user activity, or expire generated codes. LanQ removes these limitations by offering:
+Traditional QR generators often:
+- Track user activity  
+- Lock features behind subscriptions  
+- Expire generated codes  
 
-- Complete feature access with no paywalls  
+LanQ solves these issues by offering:
+- All premium features unlocked for free  
 - Permanent QR codes with no expiration  
-- Full user control over data  
-- Professional-quality output at no cost  
+- Full user control and local processing  
+- Professional-quality output for personal or business use  
+
+---
+
+## How to Use
+
+1. Open [LanQ](https://lanq.landecs.org) in your browser  
+2. Select the QR code type  
+3. Enter your data  
+4. Apply intelligent templates or customize colors and style  
+5. Preview and export as SVG for print or digital sharing  
 
 ---
 
 ## Technology
 
-- Browser-based application  
+- Browser-based QR code generation  
 - Offline-first architecture  
-- SVG-based QR rendering  
+- Intelligent template and color blending engine  
+- SVG rendering for infinite resolution  
 - PWA support for installation and offline usage  
-
----
-
-## Use Cases
-
-- Personal QR codes  
-- Business cards and branding  
-- Marketing materials  
-- Print media  
-- Privacy-focused projects  
-
----
-
-## About LanDecs
-
-LanQ is developed by **LanDecs**, a team focused on privacy-first, offline-capable, and user-respecting software. LanDecs products prioritize transparency, performance, and long-term usability without unnecessary data collection.
 
 ---
 
 ## License
 
-LanQ is provided as-is for public use. Licensing details can be added here if applicable.
+LanQ is free for public use with all features unlocked. Refer to individual file licenses for contributions.
 
 ---
 
 ## Contact
 
-For updates, documentation, and other LanDecs projects, visit the official LanDecs platforms.
+For more LanDecs projects and updates, visit [LanDecs](https://landecs.org).
