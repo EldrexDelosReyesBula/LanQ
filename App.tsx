@@ -35,7 +35,7 @@ const App: React.FC = () => {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [isDonationOpen, setIsDonationOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
-  
+
   // Mobile Bottom Sheet State
   const [mobileSheet, setMobileSheet] = useState<'content' | 'templates' | 'design' | null>('content'); 
 
@@ -87,7 +87,7 @@ const App: React.FC = () => {
   const checkDonationTimer = () => {
     const lastPrompt = localStorage.getItem('lanq-last-donate-prompt');
     const now = Date.now();
-    
+
     if (!lastPrompt) {
       localStorage.setItem('lanq-last-donate-prompt', now.toString());
       return;
@@ -113,7 +113,7 @@ const App: React.FC = () => {
   };
 
   const handleDonateAction = () => {
-    window.open('https://ko-fi.com', '_blank');
+    window.open('https://ko-fi.com/landecsorg', '_blank');
     setIsDonationOpen(false);
   };
 
@@ -185,7 +185,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const root = window.document.documentElement;
     const isDark = theme.mode === 'dark' || (theme.mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    
+
     // Mode
     if (isDark) {
       root.classList.add('dark');
@@ -244,7 +244,7 @@ const App: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 pb-32 lg:pb-12">
         {/* Desktop Layout (Split View) */}
         <div className="hidden lg:grid lg:grid-cols-12 gap-8 md:gap-12">
-          
+
           {/* Left Column: Input, Templates & Design */}
           <div className="lg:col-span-7 space-y-12">
             <section className="animate-slide-up" style={{ animationDelay: '0ms' }}>
@@ -304,7 +304,7 @@ const App: React.FC = () => {
           </div>
         </div>
       </main>
-      
+
       {/* Mobile Bottom Sheets */}
       <div className="lg:hidden">
           <BottomSheet isOpen={mobileSheet === 'content'} onClose={() => setMobileSheet(null)} title="Edit Content">
@@ -317,7 +317,7 @@ const App: React.FC = () => {
              <DesignPanel design={design} onChange={handleDesignChange} />
           </BottomSheet>
       </div>
-      
+
       <SettingsSheet 
         isOpen={isSettingsOpen} 
         onClose={() => setIsSettingsOpen(false)}
