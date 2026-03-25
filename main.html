@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LanQ — A better way to be seen</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-dim": "#003cd3",
+                        "outline": "#747779",
+                        "surface-container-low": "#eef1f3",
+                        "tertiary-fixed": "#f790e0",
+                        "primary": "#0846ed",
+                        "on-primary-container": "#001867",
+                        "on-secondary": "#f4f1ff",
+                        "inverse-on-surface": "#9a9d9f",
+                        "surface-bright": "#f5f7f9",
+                        "surface-container-highest": "#d9dde0",
+                        "on-tertiary-container": "#5f0656",
+                        "surface-container": "#e5e9eb",
+                        "tertiary-fixed-dim": "#e883d2",
+                        "on-primary": "#f2f1ff",
+                        "tertiary": "#913983",
+                        "inverse-surface": "#0b0f10",
+                        "on-tertiary-fixed-variant": "#6a1460",
+                        "on-primary-fixed-variant": "#00207e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#380033",
+                        "on-error": "#ffefef",
+                        "on-secondary-container": "#3c38a1",
+                        "inverse-primary": "#6d88ff",
+                        "secondary-fixed-dim": "#bfbdff",
+                        "error-dim": "#a70138",
+                        "surface-variant": "#d9dde0",
+                        "on-secondary-fixed": "#28218d",
+                        "on-surface-variant": "#595c5e",
+                        "background": "#f5f7f9",
+                        "primary-fixed-dim": "#718bff",
+                        "error-container": "#f74b6d",
+                        "on-error-container": "#510017",
+                        "on-background": "#2c2f31",
+                        "secondary-container": "#cfcdff",
+                        "outline-variant": "#abadaf",
+                        "tertiary-dim": "#832c76",
+                        "surface-tint": "#0846ed",
+                        "on-primary-fixed": "#000000",
+                        "surface-container-high": "#dfe3e6",
+                        "on-tertiary": "#ffeef6",
+                        "tertiary-container": "#f790e0",
+                        "secondary-dim": "#4541a9",
+                        "on-secondary-fixed-variant": "#4642aa",
+                        "secondary": "#514eb6",
+                        "error": "#b41340",
+                        "secondary-fixed": "#cfcdff",
+                        "surface": "#f5f7f9",
+                        "on-surface": "#2c2f31",
+                        "primary-fixed": "#859aff",
+                        "surface-dim": "#d0d5d8",
+                        "primary-container": "#859aff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(245, 247, 249, 0.7);
+            backdrop-filter: blur(20px)
+        }
+
+        .grain-texture {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDS_fZK51tSbogbvDnPi4quqdyZ1CMkNbxiFaoI9OOAJ5VkKJjfLNqRpB0na6U5bC22RQxHx_QbdORe-IWUIkgiD5EdPKQj4gBC-_TzGvhF3_wN_3DReeBMSDEvlrkQl8L1PL_XJNfXcEmY1kG1zZE3zRojj13VeXqkYNpkw-doZthcFToTKITEkutjNmwlNaViFlYyYJYbGz63kYQqNnfhm03MKxmqZlgdrctXxQ0HfOJWMSnhJe0_WwYHPAGpHWKWg1QfwM32qMU);
+            opacity: 0.05
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at 20% 30%, #859aff 0%, transparent 40%), radial-gradient(circle at 80% 70%, #f790e0 0%, transparent 40%), #f5f7f9
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+            vertical-align: middle
+        }
+
+        .text-glow:hover {
+            text-shadow: 0 0 15px rgba(8, 70, 237, 0.3)
+        }
+
+        background-size: 200% 200%;
+        animation: gradientMove 12s ease infinite;
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-bg text-gray-900 font-body">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-lg z-50">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+            <img src="https://eldrex.landecs.org/squad/lanq-logo.png" alt="LanDecs LanQ Logo" class="w-10 h-10 object-contain">
+
+            <div class="hidden md:flex gap-8 text-sm">
+                <a href="#features" class="hover:text-black text-gray-600">Features</a>
+                <a href="#use" class="hover:text-black text-gray-600">Use Cases</a>
+                <a href="#privacy" class="hover:text-black text-gray-600">Privacy</a>
+            </div>
+
+            <button class="bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold hover:scale-105 transition">
+                Try free
+            </button>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-24 px-5 overflow-hidden" style="background: radial-gradient(circle at 20% 30%, #859aff 0%, transparent 40%), 
+                   radial-gradient(circle at 80% 70%, #f790e0 0%, transparent 40%), 
+                   #f5f7f9;">
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+
+            <div>
+                <h1 class="font-headline text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+                    A better way <br> to be <span class="text-primary">seen.</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-xl">
+                    Simple when you need it. Flexible when you want it.
+                </p>
+
+                <div class="flex flex-wrap gap-4 mb-6">
+                    <button class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition">
+                        Try free
+                    </button>
+
+                    <button class="border border-gray-300 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition">
+                        Support
+                    </button>
+                </div>
+            </div>
+
+            <!-- VISUAL -->
+            <div class="flex justify-center">
+                <div class="bg-white rounded-3xl p-6 shadow-xl w-full max-w-sm">
+                    <img src="https://via.placeholder.com/300" class="rounded-xl">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- AUTO BLEND -->
+    <section id="features" class="py-20 px-5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+            <div class="bg-gray-200 rounded-3xl h-[300px] flex items-center justify-center">
+                <p class="text-gray-500">Preview</p>
+            </div>
+
+            <div>
+                <h2 class="font-headline text-3xl sm:text-4xl font-bold mb-6">
+                    Let it design itself.
+                </h2>
+
+                <p class="text-gray-600 text-lg mb-6">
+                    Tap once and LanQ creates a balanced, readable, and beautiful QR automatically.
+                </p>
+
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">auto_awesome</span><span class="font-medium">Smart color balancing</span></li>
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">gradient</span><span class="font-medium">Gradient intelligence</span></li>
+                    <li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">visibility</span><span class="font-medium">Readability protection</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="font-headline text-4xl font-extrabold tracking-tight mb-4">
+                Make it simple. Make it yours.
+            </h2>
+            <p class="text-on-surface-variant">
+                From link to a finished QR in seconds.
+            </p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+            <!-- Step 1 -->
+            <div class="bg-surface-container-lowest p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 group border border-outline-variant/10">
+                <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+                    <span class="material-symbols-outlined text-primary group-hover:text-on-primary text-3xl">link</span>
+                </div>
+                <h3 class="font-headline text-2xl font-bold mb-4">
+                    Add your link
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                    Paste what you want to share. It just works.
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-surface-container-lowest p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 group border border-outline-variant/10">
+                <div class="w-16 h-16 bg-tertiary/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-tertiary transition-colors">
+                    <span class="material-symbols-outlined text-tertiary group-hover:text-on-tertiary text-3xl">palette</span>
+                </div>
+                <h3 class="font-headline text-2xl font-bold mb-4">
+                    Let it design itself
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                    Auto-blend creates a balanced, beautiful result instantly.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-surface-container-lowest p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl transition-all duration-500 group border border-outline-variant/10">
+                <div class="w-16 h-16 bg-primary-dim/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-primary-dim transition-colors">
+                    <span class="material-symbols-outlined text-primary-dim group-hover:text-on-primary text-3xl">download</span>
+                </div>
+                <h3 class="font-headline text-2xl font-bold mb-4">
+                    Save and share
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed">
+                    High-quality, ready wherever you need it.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-32 bg-surface">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 max-w-3xl mx-auto">
+                <h2 class="font-headline text-5xl font-bold tracking-tight mb-6 leading-tight">
+                    Refine every detail.
+                    Or let LanQ take care of it.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[250px]">
+
+                <div class="md:col-span-2 row-span-2 bg-surface-container rounded-[3rem] p-12 overflow-hidden relative flex flex-col justify-end group">
+                    <div class="absolute inset-0 z-0">
+                        <img class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoMG-a9rmFGv2UH0-8ZMuL3ZbKtphSp6dGoCUILMotcLd_Mr0_T8R-sGc12Sbhioe3zmp15lfqBlCzXInTYgnKBIYbX07iTGi8P78M2HIA4RHFqijPmQ86DgsCS9w07nD1yE1CyzhDBdLGE4cH24CWC6zaj7KGn7KPCL35h6c1eaqWBOklt7w2mveYXUftsM9orVZPcOmw_60MBCMqvQkEIsGZc_b71FcP2OujyCgExBqjZLS-elC7dBbWF8TRu2bHCxxhWrfjKTk" />
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="font-headline text-3xl font-bold text-on-surface mb-2">
+                            3-Point Gradient Engine
+                        </h3>
+                        <p class="text-on-surface-variant text-lg">
+                            Shape color your way. Create depth and flow while keeping every scan clear and reliable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-primary text-on-primary rounded-[2.5rem] p-8 flex flex-col justify-center items-center text-center shadow-lg shadow-primary/20">
+                    <span class="material-symbols-outlined text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">visibility</span>
+                    <h3 class="font-headline text-xl font-bold">Smart Eyes</h3>
+                    <p class="text-on-primary/80 text-sm mt-2">
+                        Distinct corners that stay recognizable while matching your style.
+                    </p>
+                </div>
+
+                <div class="bg-surface-container-highest rounded-[2.5rem] p-8 flex flex-col justify-center overflow-hidden relative">
+                    <img class="absolute inset-0 w-full h-full object-cover opacity-30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHfi6t-K0qmn1kJ8cFDaUKxvWMMJAYx43X6_RaNzi5qFRBwZQk-jyjyZ6hOQz0xCwpAfZqjEH4TabU0tXGI3eX9pIFhmmbO1c0bGVOcYMBGyJBn10c893VhYY7Mlb1jSUHFWYM4Nv8BWbcvSzETsGg4srEqbkcWZuGEfncQSkuR5vt68HR_Gex2T9cNhdjEnGK6WmvXIbpFeT_iq516c-jQjCM91isitgwW-ha-Tq0ktWvuTpAhTnJazyDONRJDMXwuBnlwKegF68" />
+                    <div class="relative z-10">
+                        <h3 class="font-headline text-xl font-bold">Module Tuning</h3>
+                        <p class="text-on-surface-variant text-sm mt-2">
+                            Adjust density and shape for a lighter, more refined look.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-surface-container-low overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="font-headline text-5xl font-bold tracking-tight mb-8">
+                    Looks right. <br /><span class="text-primary">Works every time.</span>
+                </h2>
+
+                <p class="text-xl text-on-surface-variant mb-10 leading-relaxed">
+                    Color should never come at the cost of clarity. LanQ keeps every design balanced, so it stays sharp, scannable, and dependable.
+                </p>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-on-secondary-container/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                        </div>
+                        <p class="font-bold">
+                            Real-time contrast, always within readable range
+                        </p>
+                    </div>
+
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-on-secondary-container/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                        </div>
+                        <p class="font-bold">
+                            Built-in protection for reliable scanning
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative p-12 bg-surface-container-lowest rounded-[4rem] shadow-inner">
+                <img alt="LanDecs —LanQ QR Readability" class="w-full rounded-3xl" src="" />
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- TEXT -->
+            <div>
+                <h2 class="font-headline text-5xl font-bold tracking-tight mb-6 leading-tight">
+                    Design that designs itself.
+                    <br>
+                    <span class="text-primary">Your QR, your story.</span>
+                </h2>
+
+                <p class="text-xl text-on-surface-variant mb-10 leading-relaxed">
+                    Place text, add images, and shape layouts effortlessly. Every QR becomes a canvas for your ideas—meant to be seen, shared, and remembered.
+                </p>
+
+                <div class="space-y-6">
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-primary">text_fields</span>
+                        </div>
+                        <div>
+                            <p class="font-bold">Place text anywhere</p>
+                            <p class="text-sm text-on-surface-variant">
+                                Left, right, top, or bottom. Layouts that feel natural and personal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-tertiary">image</span>
+                        </div>
+                        <div>
+                            <p class="font-bold">Bring in your visuals</p>
+                            <p class="text-sm text-on-surface-variant">
+                                Backgrounds, overlays, or brand imagery—crafted to feel like yours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-secondary">grid_view</span>
+                        </div>
+                        <div>
+                            <p class="font-bold">Built on real design systems</p>
+                            <p class="text-sm text-on-surface-variant">
+                                Grids, spacing, and alignment that make every layout feel intentional and balanced.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- VISUAL -->
+            <div class="relative">
+                <div class="bg-surface-container-lowest rounded-[3rem] p-8 shadow-inner">
+                    <img src="https://via.placeholder.com/500x600" class="rounded-2xl w-full">
+                </div>
+
+                <!-- FLOATING LABEL -->
+                <div class="absolute -bottom-6 -right-6 bg-white px-6 py-4 rounded-2xl shadow-lg">
+                    <p class="text-sm font-semibold text-on-surface">
+                        LanQ Studio
+                    </p>
+                    <p class="text-xs text-on-surface-variant">
+                        Advanced editing
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. Real Use Cases (The "Fluid Hub") -->
+    <section class="py-32 bg-surface" id="use-cases">
+        <div class="max-w-7xl mx-auto px-6 mb-16">
+            <h2 class="font-headline text-4xl font-extrabold tracking-tight">
+                Made for real moments.
+            </h2>
+        </div>
+
+        <div class="flex overflow-x-auto gap-8 pb-12 pl-10 md:pl-20 scrollbar-hide no-scrollbar">
+
+            <div class="min-w-[320px] md:min-w-[400px] bg-surface-container-low rounded-[2.5rem] overflow-hidden group">
+                <div class="h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrGCs45DRCo4gcZYoMHQ3iAHKtSFlCT6GsWkcSsxy6OUjv7sUWqitlogZJ4Emy8lYsU5yG4AAXsQ_MS0A2bMf6oyk_DcXS7CNMNczjjVUn3ccCwn1l1BsWER5FrRtXkM0qMnuksaf7gMI-tuVhglX5uxIwQAU9UA63-Ek2awSQjpNpzzvvO0bE6R74DbCA8ccZZyK_YnX4j2GPjj9gf5Y8eUBxN1FcEtnt50ZULhT6RBjSvzvkYrFa-jOco2VTDAGiVF9ox73uMqs" />
+                </div>
+                <div class="p-8">
+                    <span class="font-label text-xs font-bold uppercase tracking-widest text-primary mb-2 block">
+                        Business Cards
+                    </span>
+                    <h3 class="text-xl font-bold mb-2">A better first impression</h3>
+                    <p class="text-on-surface-variant text-sm">
+                        Clean, refined, and built to scan instantly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] md:min-w-[400px] bg-surface-container-low rounded-[2.5rem] overflow-hidden group">
+                <div class="h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV--G9bStb6H6B5-A7anTcu94XV-n8JFK8RNuXCm-3Wboke1G_RBiREdhYeU6-zoFyTt6IlI5mgQqPh7J_5HlLIG0VZj5lmLdM7mMx4M7RYfspeORHMxuCCa7r4HULWieIj0qiPDMFRrjNQZirT7lrwN0hV6N7PJx_UiuDXhIrglgfAdifxvkQkw3orO5lkdbJqkIFtxu7EGajHy_epLs-X4RTA2ZAtNLQttuRtt_hpp6HrJDZBuzWrQw-0TY3AxDcD2otW8s9_jY" />
+                </div>
+                <div class="p-8">
+                    <span class="font-label text-xs font-bold uppercase tracking-widest text-tertiary mb-2 block">
+                        Events & Festivals
+                    </span>
+                    <h3 class="text-xl font-bold mb-2">Designed to stand out</h3>
+                    <p class="text-on-surface-variant text-sm">
+                        Blend seamlessly into bold, expressive layouts.
+                    </p>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] md:min-w-[400px] bg-surface-container-low rounded-[2.5rem] overflow-hidden group">
+                <div class="h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KP5YNs_IG6q-aDAoexjX_o6B_nk62vyMIyksr1iirpuPys0CJicW04SUtff6HJXfHJkHSczIF__8eNPA8eGx5KFzUvTZdT9LTyoh8u6X7DhEM-8aOtnbggupxt-OFQksbfQRD7OENF5Xf-inxHFl5inBaqVWlrzDnToi-gGOBDnE6gYJyi_zhXy3HCYGaC1h5R57MpYjVR2jsdImpmpRywS--KvXEMYd4Qb8lu_c1wR1gFh9drbW3FkEw1PfRi4MwM5cpvQgnOM" />
+                </div>
+                <div class="p-8">
+                    <span class="font-label text-xs font-bold uppercase tracking-widest text-secondary mb-2 block">
+                        Hospitality
+                    </span>
+                    <h3 class="text-xl font-bold mb-2">Effortless access</h3>
+                    <p class="text-on-surface-variant text-sm">
+                        Clear and reliable, even in low-light settings.
+                    </p>
+                </div>
+            </div>
+
+            <div class="min-w-[320px] md:min-w-[400px] bg-surface-container-low rounded-[2.5rem] overflow-hidden group">
+                <div class="h-64 overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwRgEsFIQqqMvlzE8M1VIFPTrfVzwadif2wgMZaVphyqiHq-u0M7je4uN3Rim5dC67hmezjfiHwfCb3cboOUD9nVrfOcnDrVavAQUmn1_Y0uWklvx1l-UThnEmDSQ9LU7QuB_oSdgV635ywb2iKB8UVzedgk7WPVxmlTm1ovRIFl9PNEPuIDV4k9OS8Nm8-KHjkEpVguWx4-BEwwVpaZuhqFF5XvHWpkENRFqtZCDpS3A4Y4p1U3a9nWdeKYLQqpeNmZbBQxlRAVg" />
+                </div>
+                <div class="p-8">
+                    <span class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2 block">
+                        Portfolios
+                    </span>
+                    <h3 class="text-xl font-bold mb-2">Your identity, connected</h3>
+                    <p class="text-on-surface-variant text-sm">
+                        Turn your presence into something instantly reachable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="privacy" class="py-20 bg-black text-white px-5">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+
+            <div>
+                <h2 class="font-headline text-3xl font-bold mb-6">
+                    What happens in LanQ stays in LanQ.
+                </h2>
+
+                <p class="text-gray-300">
+                    Everything runs locally on your device.
+                </p>
+            </div>
+            <!--
+            <div class="grid grid-cols-2 gap-4">
+                <div>0 cookies</div>
+                <div>100% local</div>
+                <div>No cloud</div>
+                <div>Free</div>
+            </div> 
+            -->
+
+        </div>
+    </section>
+    <section class="py-24 bg-surface text-center px-6">
+        <div class="max-w-3xl mx-auto">
+
+            <h2 class="font-headline text-4xl font-bold mb-6 leading-snug">
+                Make it yours.
+                <br>
+                Share it with the world.
+            </h2>
+
+            <p class="text-on-surface-variant text-lg mb-10 leading-relaxed">
+                Start creating now and turn every QR into something meant to be seen and shared.
+            </p>
+
+            <button class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform duration-300 shadow-lg">
+                Try it free
+            </button>
+
+        </div>
+    </section>
+
+    <footer class="bg-surface-container-low text-on-surface-variant py-12 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+
+            <!-- Branding / Logo + Text -->
+            <div class="flex flex-col items-center md:flex-row md:items-start md:gap-4 text-center md:text-left">
+                <!-- Logo -->
+                <img src="https://eldrex.landecs.org/squad/lanq-logo.png" alt="LanQ Logo" class="w-12 h-12 object-contain mb-2 md:mb-0">
+
+                <!-- Text -->
+                <div class="flex flex-col items-center md:items-start">
+                    <p class="text-sm font-semibold">LanQ</p>
+                    <p class="text-xs mt-1">© 2026 LanDecs. All rights reserved.</p>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="flex flex-wrap justify-center md:justify-end gap-6 text-sm">
+                <a href="/terms" class="hover:text-primary transition-colors">Terms of Service</a>
+                <a href="/privacy" class="hover:text-primary transition-colors">Privacy Policy</a>
+                <a href="/cookies" class="hover:text-primary transition-colors">Cookie Policy</a>
+                <a href="/support" class="hover:text-primary transition-colors">Support</a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
