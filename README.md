@@ -1,11 +1,7 @@
-<p align="center">
-  <img 
-    src="https://eldrex.landecs.org/squad/lanq-logo.png"
-    width="160"
-    alt="LanQ Logo"
-    bgcolor="white"
-  >
-</p>
+
+https://github.com/user-attachments/assets/f7e1ea19-a540-4630-b7db-400525c642d6
+
+
 
 # LanQ
 
@@ -92,3 +88,15 @@ LanQ is free for public use with all features unlocked. Refer to individual file
 ## Contact
 
 For more LanDecs projects and updates, visit [LanDecs](https://landecs.org).
+
+---
+
+<p align="center">
+  <img 
+    src="https://eldrex.landecs.org/squad/lanq-logo.png"
+    width="160"
+    alt="LanQ Logo"
+    bgcolor="white"
+  >
+</p>
+
