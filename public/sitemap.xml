@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Primary Homepage Entry -->
+  <url>
+    <loc>https://lanq.landecs.org/</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Visual QR Creator Studio -->
+  <url>
+    <loc>https://lanq.landecs.org/studio</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Curated Gradient Gallery Presets -->
+  <url>
+    <loc>https://lanq.landecs.org/gallery</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About Us Manifesto & Auto-Blend Contrast Specifications -->
+  <url>
+    <loc>https://lanq.landecs.org/about</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Full Legal Professional Terms of Use -->
+  <url>
+    <loc>https://lanq.landecs.org/terms</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Zero-Telemetry Privacy Policy Safeguards -->
+  <url>
+    <loc>https://lanq.landecs.org/privacy</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- PayPal Donations and Community Support Portal -->
+  <url>
+    <loc>https://lanq.landecs.org/support</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
