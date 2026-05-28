@@ -90,7 +90,7 @@ For more LanDecs projects and updates, visit [LanDecs](https://landecs.org).
 
 <p align="center">
   <img 
-    src="https://eldrex.landecs.org/squad/lanq-logo.png"
+    src="https://eldrex.landecs.org/logo/lanq-studio-logo.png"
     width="160"
     alt="LanQ Logo"
     bgcolor="white"
