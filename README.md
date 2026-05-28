@@ -1,4 +1,4 @@
-https://github.com/user-attachments/assets/9c77597d-806c-4309-a140-7248124c1827
+<img width="639" height="237" alt="lanq-v1 0 3" src="https://github.com/user-attachments/assets/144873da-7fe7-43d9-b6c7-8823091447f6" />
 
 # LanQ
 
