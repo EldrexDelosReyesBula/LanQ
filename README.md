@@ -1,6 +1,6 @@
 <img width="639" height="237" alt="lanq-v1 0 3" src="https://github.com/user-attachments/assets/144873da-7fe7-43d9-b6c7-8823091447f6" />
 
-# LanQ
+# LanQ Studio
 
 [LanQ Web App](https://lanq.landecs.org) – A premium, offline-first QR code generator built by the LanDecs team. LanQ enables users to create professional, privacy-first QR codes entirely in the browser, with no cloud services, subscriptions, or tracking.
 
